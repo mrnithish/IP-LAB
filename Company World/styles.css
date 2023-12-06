@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#map-container {
+    position: relative;
+    width: 100%;
+    height: 800px; 
+    background-image: url('map.jpg'); 
+    background-size: cover;
+}
+
+.hotspot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red; 
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+#info-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#info-title {
+    margin-top: 0;
+}
+
+#info-text {
+    margin-bottom: 0;
+}
+
+
+#hotspot3 {
+    top: 150px;
+    right: 200px;
+}
+
+#hotspot4 {
+    top: 330px;
+    right: 350px;
+}
+#hotspot2 {
+    top: 320px;
+    left: 290px;
+}
+#hotspot1{
+    top: 190px;
+    left: 200px;
+}
+
+

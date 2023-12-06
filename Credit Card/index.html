@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Pages</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <nav>
+        <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="payment.html">Payment</a></li>
+        </ul>
+    </nav> -->
+
+    <div class="main-container">
+        <div class="card">
+            <h2>Login</h2>
+            <p>Already have an account? Login now to access your profile.</p>
+            <a href="login.html">Go to Login</a>
+        </div>
+
+        <div class="card">
+            <h2>Sign Up</h2>
+            <p>Create a new account to get started. It's quick and easy!</p>
+            <a href="signup.html">Sign Up Now</a>
+        </div>
+
+        <div class="card">
+            <h2>Profile</h2>
+            <p>View and update your profile information anytime.</p>
+            <a href="profile.html">Go to Profile</a>
+        </div>
+
+        <div class="card">
+            <h2>Payment</h2>
+            <p>Securely submit your payment details for a seamless experience.</p>
+            <a href="payment.html">Go to Payment</a>
+        </div>
+    </div>
+
+</body>
+</html>
