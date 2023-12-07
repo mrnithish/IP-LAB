@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Credit Card Pages</title> 
+<!-- External CSS --> 
+<link rel="stylesheet" href="styles.css"> 
+</head> 
+<body> 
+<div id="app"> 
+<!-- Registration Page --> 
+<div v-if="currentPage === 'registration'"> 
+<h2>Registration</h2> 
+<form @submit.prevent="register"> 
+<label for="username">Username:</label> 
+                <input type="text" id="username" v-model="registration.username" required> 
+  
+                <label for="password">Password:</label> 
+                <input type="password" id="password" v-model="registration.password" required> 
+  
+                <button type="submit">Register</button> 
+            </form> 
+        </div> 
+  
+        <!-- Login Page --> 
+        <div v-else-if="currentPage === 'login'"> 
+            <h2>Login</h2> 
+            <form @submit.prevent="login"> 
+                <label for="loginUsername">Username:</label> 
+                <input type="text" id="loginUsername" v-model="login.username" required> 
+  
+                <label for="loginPassword">Password:</label> 
+                <input type="password" id="loginPassword" v-model="login.password" required> 
+  
+                <button type="submit">Login</button> 
+            </form> 
+        </div> 
+  
+        <!-- User Profile Page --> 
+        <div v-else-if="currentPage === 'profile'" v-if="isLoggedIn"> 
+            <h2>User Profile</h2> 
+            <p>Welcome, {{ currentUser.username }}!</p> 
+            <button @click="logout">Logout</button> 
+        </div> 
+  
+        <!-- Payment Details Page --> 
+        <div v-else-if="currentPage === 'payment'" v-if="isLoggedIn"> 
+            <h2>Payment Details</h2> 
+            <form @submit.prevent="makePayment"> 
+                <label for="cardNumber">Card Number:</label> 
+                <input type="text" id="cardNumber" v-model="payment.cardNumber" required> 
+  
+                <label for="expiryDate">Expiry Date:</label> 
+                <input type="text" id="expiryDate" v-model="payment.expiryDate" required> 
+  
+                <label for="cvv">CVV:</label> 
+                <input type="text" id="cvv" v-model="payment.cvv" required> 
+<button type="submit">Make Payment</button> 
+</form> 
+</div> 
+</div> 
+<!-- External JavaScript --> 
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script> 
+<script src="app.js"></script> 
+</body> 
+</html>

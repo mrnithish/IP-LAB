@@ -1,0 +1,26 @@
+Step 3: Database Setup 
+• Create a MySQL database and a table named registrations with columns id (auto
+increment), first_name, last_name, email, phone, and event. 
+ 
+CREATE DATABASE yourdatabase; 
+USE yourdatabase; 
+  
+CREATE TABLE registrations ( 
+    id INT PRIMARY KEY AUTO_INCREMENT, 
+    first_name VARCHAR(255), 
+    last_name VARCHAR(255), 
+    email VARCHAR(255), 
+    phone VARCHAR(20), 
+    event VARCHAR(50) 
+); 
+ 
+Step 4: Deployment 
+• Deploy your application to a Servlet container like Apache Tomcat. 
+• Ensure that your database server is running. 
+Step 5: Access the Registration Form 
+• Open a web browser and navigate to 
+http://localhost:8080/yourwebapp/registration.html. 
+• Fill out the form and submit the registration. 
+This is a basic example, and in a real-world scenario, you'd want to add more validation, 
+error handling, and security measures. Additionally, it's recommended to use frameworks 
+like Spring for more robust and maintainable applications.
